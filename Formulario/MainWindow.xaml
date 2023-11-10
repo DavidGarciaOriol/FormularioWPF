@@ -21,8 +21,14 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <Label x:Name="labelNombre" Content="Usuario" FontSize="24px" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0"/>
+            <Label x:Name="labelNombre" Content="Usuario" FontSize="24px" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0"/>
             <TextBox x:Name="nombreText" Text="" FontSize="24px" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="0" Grid.Column="1"/>
+
+            <Label x:Name="labelPassword" Content="Contraseña" FontSize="24px" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0"/>
+            <TextBox x:Name="passwordText" Text="" FontSize="24px" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1"/>
+            
+            <Label x:Name="labelDatePicker" Content="Fecha Nacimiento" FontSize="24px" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0"/>
+            <DatePicker x:Name="datePicker" Text="" FontSize="24px" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1"/>
 
         </Grid>
     </Grid>
