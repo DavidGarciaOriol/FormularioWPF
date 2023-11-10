@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "vxAPUtZ5OOhf7yGsBc+erw7QoupD41YZLVIm76TAxMRfML8U4bnhFJNulXxUioNcI0p4n+j0SWwMV7CkvB2QaQ==",
+  "success": true,
+  "projectFilePath": "D:\\ciclot\\DGO\\Visual Studio Projects\\Formulario\\Formulario\\Formulario\\Formulario.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\2dam\\.nuget\\packages\\sqlite\\3.13.0\\sqlite.3.13.0.nupkg.sha512",
+    "C:\\Users\\2dam\\.nuget\\packages\\sqlite-net-pcl\\1.8.116\\sqlite-net-pcl.1.8.116.nupkg.sha512",
+    "C:\\Users\\2dam\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.4\\sqlitepclraw.bundle_green.2.0.4.nupkg.sha512",
+    "C:\\Users\\2dam\\.nuget\\packages\\sqlitepclraw.core\\2.0.4\\sqlitepclraw.core.2.0.4.nupkg.sha512",
+    "C:\\Users\\2dam\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.4\\sqlitepclraw.lib.e_sqlite3.2.0.4.nupkg.sha512",
+    "C:\\Users\\2dam\\.nuget\\packages\\sqlitepclraw.provider.dynamic_cdecl\\2.0.4\\sqlitepclraw.provider.dynamic_cdecl.2.0.4.nupkg.sha512",
+    "C:\\Users\\2dam\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
+  ],
+  "logs": []
+}
