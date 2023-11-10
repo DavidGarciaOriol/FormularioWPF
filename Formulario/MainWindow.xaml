@@ -20,6 +20,10 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
+
+            <Label x:Name="labelNombre" Content="Usuario" FontSize="24px" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0"/>
+            <TextBox x:Name="nombreText" Text="" FontSize="24px" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="0" Grid.Column="1"/>
+
         </Grid>
     </Grid>
 </Window>
