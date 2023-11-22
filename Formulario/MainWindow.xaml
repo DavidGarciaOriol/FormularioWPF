@@ -5,31 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Formulario"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" MinHeight="480" Height="480" MaxHeight="480" MinWidth="800" Width="800" MaxWidth="800">
     <Grid>
         <Grid>
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.33*"/>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
+                <RowDefinition Height="4*"/>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
+
             </Grid.RowDefinitions>
 
-            <Label x:Name="labelNombre" Content="Usuario" FontSize="24px" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0"/>
-            <TextBox x:Name="nombreText" Text="" FontSize="24px" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="0" Grid.Column="1"/>
+            <Label x:Name="labelNombre" Content="Usuario" FontSize="18px" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="0" Grid.Column="0" Margin="40,60,0,0"/>
+            <TextBox x:Name="nombreText" Text="" Width="260px" FontSize="18px" HorizontalAlignment="right" VerticalAlignment="Top" Grid.Row="0" Grid.Column="0" Margin="20,60,40,0"/>
 
-            <Label x:Name="labelPassword" Content="Contraseña" FontSize="24px" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0"/>
-            <TextBox x:Name="passwordText" Text="" FontSize="24px" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1"/>
+            <Label x:Name="labelPassword" Content="Contraseña" FontSize="18px" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" Margin="40,0,0,0"/>
+            <TextBox x:Name="passwordText" Text="" Width="260px" FontSize="18px" HorizontalAlignment="right" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" Margin="20,0,40,0"/>
             
-            <Label x:Name="labelDatePicker" Content="Fecha Nacimiento" FontSize="24px" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0"/>
-            <DatePicker x:Name="datePicker" Text="" FontSize="24px" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1"/>
+            <Label x:Name="labelDatePicker" Content="Fecha Nacimiento" FontSize="18px" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="0" Margin="40,0,0,60"/>
+            <DatePicker x:Name="datePicker" Text="" FontSize="18px" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="0" Margin="20,0,40,60"/>
 
+            <Frame x:Name="profilePictureFrame" Width="228px" Height="228px" Background="Black" Content="Aaa" Padding="10px" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Grid.Row="0"/>
+            <Button x:Name="selectProfilePicture" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" Content="Buscar Foto" Width="120px" Height="28px" FontSize="18px" Grid.Column="1" Grid.Row="0" Margin="57,293,58,26"/>
         </Grid>
     </Grid>
 </Window>

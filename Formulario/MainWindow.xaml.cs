@@ -14,14 +14,15 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace Formulario
 {
     public partial class MainWindow : Window
     {
 
-        string password;
-        string usuario;
-        DateTime fechaNacimiento;
+        private string password;
+        private string username;
+        private DateTime fechaNacimiento;
 
         
         
@@ -30,55 +31,86 @@ namespace Formulario
             InitializeComponent();
         }
 
+
+        // Event Listeners
+
         private void Enviar_Click(object sender, RoutedEventArgs e)
         {
-            password = ""; // TextBox de Password
-            usuario = ""; // TextBox de Usuario
-            fechaNacimiento = DateTime.Now; // Cambiar para obtener Fecha de Nacimiento de DatePicker
-
-            ComprobarPassword(password);
-            ComprobarUsuario(usuario);
-            ComprobarEdad(fechaNacimiento);
-
-        }
-
-        private static void ComprobarPassword(string password)
-        {
-            Regex regexPassword = new("^(?=.*\\d)(?=.*[a - z])(?=.*[A - Z])(?=.*[a - zA - Z]).{8,12}$");
-            if (!regexPassword.IsMatch(password))
+            try
             {
-                // TO DO
-            } else
+                username = nombreText.Text; // TextBox de Usuario
+                password = passwordText.Text; // TextBox de Password
+                fechaNacimiento = datePicker.SelectedDate.Value; // Cambiar para obtener Fecha de Nacimiento de DatePicker
+
+                Usuario user;
+
+                if (ComprobarPassword(password) && ComprobarUsuario(username) && ComprobarEdad(fechaNacimiento))
+                {
+                    user = new Usuario(username, password, fechaNacimiento);
+                    agregarUsuarioBBDD(user);
+                }
+            } catch (Exception)
             {
                 // TO DO
             }
         }
 
-        private static void ComprobarUsuario(string usuario)
+
+        // Métodos de Comprobación de parámetros
+
+        private static bool ComprobarPassword(string password)
         {
-            if (usuario.Equals(""))
+            bool output;
+
+            Regex regexPassword = new("^(?=.*\\d)(?=.*[a - z])(?=.*[A - Z])(?=.*[a - zA - Z]).{6,12}$");
+            if (regexPassword.IsMatch(password))
             {
                 // TO DO
+                output = true;
             } else
             {
                 // TO DO
+                output = false;
             }
+
+            return output;
         }
 
-        private static void ComprobarEdad(DateTime fechaNacimiento)
+        private static bool ComprobarUsuario(string username)
         {
-            
-            if (MayorDeEdad(fechaNacimiento) < 18)
+            bool output;
+            if (!username.Equals("") && username != null)
             {
                 // TO DO
+                output = true;
             } else
             {
                 // TO DO
+                output = false;
             }
+
+            return output;
+        }
+
+        private static bool ComprobarEdad(DateTime fechaNacimiento)
+        {
+            bool output;
+
+            if (CalcularEdad(fechaNacimiento) >= 18)
+            {
+                // TO DO
+                output = true;
+            } else
+            {
+                // TO DO
+                output = false;
+            }
+
+            return output;
 
         }
 
-        private static int MayorDeEdad(DateTime fechaNacimiento)
+        private static int CalcularEdad(DateTime fechaNacimiento)
         {
             DateTime fechaActual = DateTime.Now;
             int edad = fechaActual.Year - fechaNacimiento.Year;
@@ -87,9 +119,16 @@ namespace Formulario
             return edad;
         }
 
-        private void ConectarSQLiteBBDD()
+
+        // MANEJADORES DE BASES DE DATOS
+
+        private void agregarUsuarioBBDD(Usuario usuario)
         {
             // TO DO
+
+            string usernameBBDD = usuario.GetUsername();
+            string passwordBBDD = usuario.GetPassword();
+            DateTime fechaNacimientoBBDD = usuario.GetFechaNacimiento();
         }
     }
 }
